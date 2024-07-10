@@ -8,8 +8,8 @@ module.exports.getCandle = async (req, res) => {
 }
 
 module.exports.saveCandle = async (req, res) => {
-    const { name } = req.body;
-    CandleModel.create({ name })
+    const { img, name, price } = req.body;
+    CandleModel.create({ img, name, price })
     .then((data) => { console.log('Candle added')
         res.send(data)
  })
